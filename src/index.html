@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="./styles/lightslider.css" />             
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>     
+  <link rel="stylesheet" href="./assets/splide/css/splide.min.css">
+  <link rel="stylesheet" href="./assets/splide/css/splide-core.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/font/iran/fontiran.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Mazraee</title>
+    
+</head>
+<body>
+    <!-- create header -->
+    <header class="w-full shadow shadow-gray-300 px-8 py-2 h-[78px] flex justify-between items-center header-container">
+        <div class="flex items-center rightColumnHeader">
+            <img src="./assets/images & svg/nav-logo.svg" id="hamburger" onclick="openNav()" alt="navLogo" class="nav-logo hidden">
+            <div class="flex flex-col  w-[70px] items-center justify-center header-logo-container">
+                <img src="./assets/images & svg/logo.svg" alt="logo">
+                <p class="mt-1 text-[14px] ">Mazraee</p>
+            </div>
+            
+            <nav class="flex items-center mr-[90px] gap-4" id="navbar-container">
+                <div class="flex gap-2">
+                    <img src="./assets/images & svg/Grouping.svg" alt="Grouping">
+                    <p >دسته بندی ها</p>
+                    <img src="./assets/images & svg/bottom arrow.svg" alt="bottom arrow">
+                </div>
+                <div class="flex gap-2 transition-all duration-200">
+                    <img src="./assets/images & svg/home.svg" class="opacity-0" alt="" width="18px">
+                    <p>صفحه اصلی</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./assets/images & svg/shop-icon-header.svg" class="opacity-0" alt="" width="18px">
+                    <a href="./shopPage.html" class="text-[14px]">فروشگاه</a>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./assets/images & svg/discount-icon-header.svg" class="opacity-0" alt="" width="18px">
+                    <p>تخفیف ها و پیشنهادات</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./assets/images & svg/start-icon-header.svg" class="opacity-0" alt="" width="18px">
+                    <p>از کجا شروع کنم</p>
+                </div>
+            </nav>
+  
+
+    
+
+            
+
+            <nav class="gap-4" id="navbar-container-2">
+                <div class="w-full flex justify-between items-center pt-2 px-1 pb-4 border-b border-b-[#b8b8b833]">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/images & svg/logo.svg" width="24px" height="24px" alt="">
+                        <p class="text-[12px]">Mazraee</p>
+                    </div>
+                    <img src="./assets/images & svg/close-icon-responsive.svg" width="21px" height="21px" onclick="closeNav()" alt="close-icon" class="close-icon-menu hidden">
+                </div>
+                
+                <div class="w-full flex flex-col gap-3 pb-4 border-b border-b-[#b8b8b833]">
+
+                    <div class="flex items-center gap-8 mb-1">
+                        <img src="./assets/images & svg/shop-icon-header.svg" width="18px" height="18px" alt="">
+                        <a class="text-[13px]" href="./shopPage.html">فروشگاه</a>
+                    </div>
+                   
+                    <div class="flex items-center gap-8 mb-1">
+                        <img src="./assets/images & svg/discount-icon-header.svg" width="18px" height="18px" alt="">
+                        <p class=" text-[13px]">تخفیف ها و پیشنهادات</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 mb-1">
+                        <img src="./assets/images & svg/start-icon-header.svg" width="18px" height="18px" alt="">
+                        <p  class=" text-[13px]">از کجا شروع کنم؟</>
+                    </div>
+
+                    <div class="flex items-center gap-8 mb-1">
+                        <img src="./assets/images & svg/aboutUs-icon-header.svg" width="18px" height="18px" alt="">
+                        <p class=" text-[13px]">درباره ما</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 mb-1 text-[12px]">
+                        <img src="./assets/images & svg/weblog-icon-header.svg" width="18px" height="18px" alt="">
+                        <p class=" text-[13px]">وبلاگ</p>
+                    </div>
+
+                    </div>
+
+                    <div class="w-full flex flex-col gap-7 pb-4">
+                        <h2 class="text-[13px] font-bold mb-2">دسته بندی ها</h2>
+
+                        <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">محصولات زراعی</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+
+                          <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">ادوات کشاورزی</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+
+                          <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">فرآورده ها</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+
+                          <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">نهاده های کشاورزی</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+
+                          <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">خدمات و صنایع وابسته</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+
+                          <select draggable="true" class="outline-none border-none text-[13px]">
+                            <option value="" selected class="hidden">دانش و علوم کشاورزی</option>
+                            <option value="actual value 2">Display Text 2</option>
+                            <option value="actual value 3">Display Text 3</option>
+                          </select>
+                    </div>
+                </nav>
+            
+            
+        </div>
+
+        <div class="flex items-center gap-12 ml-9 leftColumnHeader">
+            <div class="w-full bg-[#F5F5F5]  items-center px-4 py-2 rounded-[12px] hidden header-search-box">
+                <img src="./assets/images & svg/search-icon-2.svg" alt="search-icon" width="25px">
+                <input type="text" placeholder="دنبال چه محصولی هستی؟" class="w-full h-full bg-transparent flex justify-center items-center mr-4 outline-none">
+            </div>
+            <div class="flex items-center justify-center  rounded-full signupLink w-[160px] h-[40px] text-[#06B884]">
+                <img src="./assets/images & svg/signup.svg" alt="signup" class="ml-3">
+                <p  class="bg-transparent cursor-pointer" id="signupLink"> <span class="hidden md:inline-block">ثبت نام |</span> ورود</p>
+            </div>
+            <div class="flex flex-col justify-center items-center relative basket-icon">
+                <!-- <img src="./assets/images & svg/shopHeader.svg" class="hidden shopHeader1" alt="" > -->
+                <img src="./assets/images & svg/basket-icon.svg" class="basket-img" alt="">
+                <p class="bg-[#EF4056]  w-[22px] h-[22px] text-[16px] text-white text-center rounded-md flex justify-center items-center absolute -bottom-4 -right-3">3</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- main container :  -->
+    <main class="mt-2 w-full relative">
+        <section class="w-full px-14 py-4 grid grid-cols-3 gap-2 mb-3 items-center slider-shops-section">
+            <!-- slider -->
+            <div class="col-span-2 slider-section-1 " >
+                <div class="splide">
+                    
+                    <ul class="splide__pagination panigation-sp " style="display: none;">
+                        <li>
+                          <button
+                            class="splide__pagination__page panigation-page"
+                            type="button"
+                            aria-controls="splide01-slide01"
+                            aria-label="Go to slide 1"
+                            aria-current="true"
+                          >
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            class="splide__pagination__page panigation-page"
+                            type="button"
+                            aria-controls="splide01-slide02"
+                            aria-label="Go to slide 2"
+                          >
+                          </button>
+                        </li>
+                        
+                        <li>
+                            <button
+                              class="splide__pagination__page panigation-page"
+                              type="button"
+                              aria-controls="splide01-slide02"
+                              aria-label="Go to slide 2"
+                            >
+                            </button>
+                          </li>
+                      </ul>
+                    
+                    
+                    <div class="splide__arrows hidden md:block">
+                    <button class="splide__arrow splide__arrow--prev prev-btn" >
+                        <i class='fas fa-angle-up' style='font-size:14px'></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next absolute next-btn">
+                        <i class="fas fa-angle-down" style="font-size:14px"></i>
+                    </div>
+                    <div class="splide__track block shadow-md shadow-gray-300 rounded-2xl">
+                        <ul class="splide__list ">
+                            <li class="splide__slide rounded-2xl" id="slider1"><img src="./assets/images & svg/pexels-pixabay-415708.png" height="580px" class="rounded-3xl" alt=""></li>
+                            <li class="splide__slide rounded-2xl" id="slider2"><img src="./assets/images & svg/pexels-pixabay-415708.png" height="580px" class="rounded-3xl" alt=""></li>
+                            <li class="splide__slide rounded-2xl" id="slider3"><img src="./assets/images & svg/pexels-pixabay-415708.png" height="580px" class="rounded-3xl" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            
+            
+
+            <div class="w-full rounded-2xl h-[315px] bg-white shadow-md shadow-gray-300 px-4 py-6 relative -mt-8 shops-section-1-container">
+                <div class="w-full flex justify-between items-center">
+                    <h1 class="text-[14px] font-bold">آخرین فروشگاه های ثبت شده</h1>
+                    <button class="text-[13px]">مشاهده همه</button>
+                </div>
+                <div class="w-full flex justify-center flex-col mt-5 gap-4  shops-section-1">
+                    <div class="flex items-end item-shops">
+                        <img 
+                        src="./assets/images & svg/recently-shop1.svg"
+                        alt="recently-shop"
+                        class="border-2 border-white blob orange shadow w-[60px] h-[60px] shadow-gray-500 rounded-full img-related-shopes"
+                        >
+                        <div class="w-full flex items-end border-b border-gray-200 pb-5 border-shop">
+                            <div class="flex justify-center flex-col gap-1 mr-3">
+                                <h2 class="font-bold text-[12px]">عرقیجات کاشان</h2>
+                                <h3 class="text-[11px] font-[400] ml-16">لورم ایپسوم متن ساختگی</h3>
+                            </div>
+                            <p class="-ml-4 w-[92px] h-[33px] text-[11px] font-medium flex justify-center items-center rounded-lg bg-[#00dc9e13] text-center ">26 + محصول</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-end item-shops">
+                        <img 
+                        src="./assets/images & svg/recently-shop1.svg"
+                        alt="recently-shop"
+                        class="border-2 border-white blob orange shadow w-[60px] h-[60px] shadow-gray-500 rounded-full img-related-shopes"
+                        >
+                        <div class="w-full flex items-end border-b border-gray-200 pb-4 border-shop">
+                            <div class="flex justify-center flex-col gap-1 mr-3">
+                                <h2 class="font-bold text-[12px]">عرقیجات کاشان</h2>
+                                <h3 class="text-[11px] font-[400] ml-16">لورم ایپسوم متن ساختگی</h3>
+                            </div>
+                            <p class="-ml-4 w-[92px] h-[33px] text-[11px] font-medium flex justify-center items-center rounded-lg bg-[#00dc9e13] text-center ">26 + محصول</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-end item-shops">
+                        <img 
+                        src="./assets/images & svg/recently-shop1.svg"
+                        alt="recently-shop"
+                        class="border-2 border-white blob orange shadow w-[60px] h-[60px] shadow-gray-500 rounded-full img-related-shopes"
+                        >
+                        <div class="w-full flex items-end  pb-4 border-shop">
+                            <div class="flex justify-center flex-col gap-1 mr-3">
+                                <h2 class="font-bold text-[12px]">عرقیجات کاشان</h2>
+                                <h3 class="text-[11px] font-[400] ml-16">لورم ایپسوم متن ساختگی</h3>
+                            </div>
+                            <p class="-ml-4 w-[92px] h-[33px] text-[11px] font-medium flex justify-center items-center rounded-lg bg-[#00dc9e13] text-center ">26 + محصول</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="flex items-end item-shops ">
+                        <img 
+                        src="./assets/images & svg/recently-shop1.svg"
+                        alt="recently-shop"
+                        class="border-2 border-white shadow w-[60px] h-[60px] shadow-gray-500 rounded-full"
+                        >
+                        <div class="w-full flex items-end border-b border-gray-200 pb-4 border-shop">
+                            <div class="flex justify-center flex-col gap-1 mr-3">
+                                <h2 class="font-bold text-[12px]">عرقیجات کاشان</h2>
+                                <h3 class="text-[11px] font-[400] ml-16">لورم ایپسوم متن ساختگی</h3>
+                            </div>
+                            <p class="-ml-4 w-[92px] h-[33px] text-[11px] font-medium flex justify-center items-center rounded-lg bg-[#00dc9e13] text-center ">26 + محصول</p>
+                        </div>
+                    </div> -->
+                    
+                </div>
+
+                <div class="flex w-[80%]  shop-btn-section-1 h-[53px] bg-[#00C897]   rounded-2xl text-white items-center absolute -bottom-8 right-10">
+                    <p class="w-[20%] flex justify-center items-center bg-[#00DC9E] h-full rounded-[1rem] -ml-2 z-10">
+                        <img src="./assets/images & svg/shop-icon1.svg" alt="">
+                    </p>
+                    <button class="bg-[#00C897]  w-[80%] z-[1]  h-full text-center flex font-bold gap-3 justify-center items-center rounded-tl-[1.25rem] rounded-bl-[1.25rem]"> <p class="text-[15px]">فروشنده ای؟</p>فروشگاه تو بساز</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- search bar section -->
+        <section class="w-full px-14 relative search-bar-section">
+            <div class="w-full px-10 py-2  bg-[#151D3B] text-white rounded-2xl transition-all duration-200 ease-in-out" id="search-box-home">
+                <div class="w-full  flex gap-6 items-center " id="container-search-box">
+                    <div class="flex flex-col justify-center items-center gap-3">
+                        <img src="./assets/images & svg/searchIcon.svg" width="22px" height="22px" alt="">
+                        <h3>دنبال چه محصولی هستی؟</h3>
+                    </div>
+                    <div class="flex flex-col items-start gap-3">
+                        <h2 class="mr-5 text-[14px]">دسته بندی مورد نظر</h2>
+                        <details class="custom-select">
+                            <summary class="radios">
+                              <input type="radio" name="itemselect1" id="defaultselect1" title="فراورده های کشاورزی" checked>
+                              <input type="radio" name="itemselect1" id="item1select1" title="محصول 1">
+                              <input type="radio" name="itemselect1" id="item2select1" title="محصول 2">
+                              <input type="radio" name="itemselect1" id="item3select1" title="محصول 3">
+                              <input type="radio" name="itemselect1" id="item4select1" title="محصول 4">
+                              <input type="radio" name="itemselect1" id="item5select1" title="محصول 5">
+                            </summary>
+                            <ul class="list">
+                              <li>
+                                <label for="item1select1">محصول 1</label>
+                              </li>
+                              <li>
+                                <label for="item2select1">محصول 2</label>
+                              </li>
+                              <li>
+                                <label for="item3select1">محصول 3</label>
+                              </li>
+                              <li>
+                                <label for="item4select1">محصول 4</label>
+                              </li>
+                              <li>
+                                <label for="item5select1">محصول 5</label>
+                              </li>
+                            </ul>
+                          </details>
+                    </div>
+
+
+                    <div class="flex flex-col items-start gap-3">
+                        <h2 class="mr-5 text-[14px]">گروه بندی محصول موردنظر</h2>
+                        <details class="custom-select">
+                            <summary class="radios">
+                              <input type="radio" name="itemselect2" id="defaultselect2" title="چای" checked>
+                              <input type="radio" name="itemselect2" id="item1select2" title="محصول 1">
+                              <input type="radio" name="itemselect2" id="item2select2" title="محصول 2">
+                              <input type="radio" name="itemselect2" id="item3select2" title="محصول 3">
+                              <input type="radio" name="itemselect2" id="item4select2" title="محصول 4">
+                              <input type="radio" name="itemselect2" id="item5select2" title="محصول 5">
+                            </summary>
+                            <ul class="list">
+                              <li>
+                                <label for="item1select2">محصول 1</label>
+                              </li>
+                              <li>
+                                <label for="item2select2">محصول 2</label>
+                              </li>
+                              <li>
+                                <label for="item3select2">محصول 3</label>
+                              </li>
+                              <li>
+                                <label for="item4select2">محصول 4</label>
+                              </li>
+                              <li>
+                                <label for="item5select2">محصول 5</label>
+                              </li>
+                            </ul>
+                          </details>
+                    </div>
+
+
+                    <button class="bg-transparent w-[290px] px-4 py-3 flex justify-center items-center border border-[#00DC9E] text-[#00DC9E] transition-all duration-150 hover:bg-[#00DC9E] hover:text-white mt-7 rounded-[8px] h-[48px]">جستجو کن</button>
+                </div>
+                <!-- <hr class="border-t border-gray-700 w-[90%]  left-0"> -->
+                <div class="w-full h-full flex justify-center m-0 p-0" id="bottom-arrow-search-box">
+                    <img src="./assets/images & svg/bottom-arrow-customize.svg"  class="cursor-pointer absolute -bottom-10  w-[72px] h-[72px] transition-all duration-200 ease-in-out" alt="">
+                </div>
+
+                <div class="w-full h-full  justify-center m-0 p-0 hidden" id="up-arrow-search-box">
+                    <img src="./assets/images & svg/up-arrow-customize.svg"  class="cursor-pointer absolute -bottom-10  w-[72px] h-[72px] transition-all duration-200 ease-in-out" alt="">
+                </div>
+
+
+                <!-- slider products -->
+                <div class="py-3" >
+                <div class="w-full justify-center items-center flex-nowrap gap-3 hidden mb-10" id="container-product-search-box">
+                    <div class="w-[290px] relative rounded-[1.75rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white text-black product">
+                        <img src="./assets/images & svg/bg-product.jpg" width="270px" alt="productImg">
+                        <h1 class="w-[90%] mr-4 text-[18px] font-bold mt-4">آجیل و خشکبار</h1>
+                        <div class="w-[90%] flex justify-between items-center mr-4 mb-5 font-medium">
+                            <p class="text-[16px]">250.000 تومان</p>
+                            <div class="flex gap-2 items-center">
+                                <p class="text-[18px] font-medium mt-2">4</p>
+                                <img src="./assets/images & svg/star-product.svg" alt="">
+                            </div>
+                        </div>
+                            <button class="w-[56px] h-[56px] cursor-pointer buttonShopProduct overflow-hidden bg-[#EF4056] z-[2] flex justify-center items-center rounded-full shadow shadow-gray-400 absolute top-[94%] right-[20px] border border-[#EF4056] transition-[width] duration-200 hover:w-[260px] hover:justify-center hover:items-center hover:px-2 hover:bg-[#EF4056]">
+                                <img src="./assets/images & svg/plus-icon-white.svg" class="img1btnShopProduct font-bold" alt="">
+                                <img src="./assets/images & svg/plus-icon-bold.svg" class="img1btnShopProduct hidden" alt="">
+                                <p class="text-white textBbuttonShopProduct absolute -left-36 transition-all duration-200 font-bold text-[16px]">افزودن به سبد خرید</p>
+                            </button>
+                    </div>
+
+                    <div class="w-[290px] relative rounded-[1.75rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white text-black product">
+                        <img src="./assets/images & svg/bg-product.jpg" width="270px" alt="productImg">
+                        <h1 class="w-[90%] mr-4 text-[18px] font-bold mt-4">آجیل و خشکبار</h1>
+                        <div class="w-[90%] flex justify-between items-center mr-4 mb-5 font-medium">
+                            <p class="text-[16px]">250.000 تومان</p>
+                            <div class="flex gap-2 items-center">
+                                <p class="text-[18px] font-medium mt-2">4</p>
+                                <img src="./assets/images & svg/star-product.svg" alt="">
+                            </div>
+                        </div>
+                            <button class="w-[56px] h-[56px] cursor-pointer buttonShopProduct overflow-hidden bg-[#EF4056] z-[2] flex justify-center items-center rounded-full shadow shadow-gray-400 absolute top-[94%] right-[20px] border border-[#EF4056] transition-[width] duration-200 hover:w-[260px] hover:justify-between hover:items-center hover:px-2 hover:bg-[#EF4056]">
+                                <img src="./assets/images & svg/plus-icon-white.svg" class="img1btnShopProduct font-bold" alt="">
+                                <img src="./assets/images & svg/plus-icon-bold.svg" class="img1btnShopProduct hidden" alt="">
+                                <p class="text-white textBbuttonShopProduct absolute -left-36 transition-all duration-200 font-bold text-[16px]">افزودن به سبد خرید</p>
+                            </button>
+                    </div>
+
+                    <div class="w-[290px] relative rounded-[1.75rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white text-black product">
+                        <img src="./assets/images & svg/bg-product.jpg" width="270px" alt="productImg">
+                        <h1 class="w-[90%] mr-4 text-[18px] font-bold mt-4">آجیل و خشکبار</h1>
+                        <div class="w-[90%] flex justify-between items-center mr-4 mb-5 font-medium">
+                            <p class="text-[16px]">250.000 تومان</p>
+                            <div class="flex gap-2 items-center">
+                                <p class="text-[18px] font-medium mt-2">4</p>
+                                <img src="./assets/images & svg/star-product.svg" alt="">
+                            </div>
+                        </div>
+                            <button class="w-[56px] h-[56px] cursor-pointer buttonShopProduct overflow-hidden bg-[#EF4056] z-[2] flex justify-center items-center rounded-full shadow shadow-gray-400 absolute top-[94%] right-[20px] border border-[#EF4056] transition-[width] duration-200 hover:w-[260px] hover:justify-between hover:items-center hover:px-2 hover:bg-[#EF4056]">
+                                <img src="./assets/images & svg/plus-icon-white.svg" class="img1btnShopProduct font-bold" alt="">
+                                <img src="./assets/images & svg/plus-icon-bold.svg" class="img1btnShopProduct hidden" alt="">
+                                <p class="text-white textBbuttonShopProduct absolute -left-36 transition-all duration-200 font-bold text-[16px]">افزودن به سبد خرید</p>
+                            </button>
+                    </div>
+
+                    <div class="w-[290px] relative rounded-[1.75rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white text-black product">
+                        <img src="./assets/images & svg/bg-product.jpg" width="270px" alt="productImg">
+                        <h1 class="w-[90%] mr-4 text-[18px] font-bold mt-4">آجیل و خشکبار</h1>
+                        <div class="w-[90%] flex justify-between items-center mr-4 mb-5 font-medium">
+                            <p class="text-[16px]">250.000 تومان</p>
+                            <div class="flex gap-2 items-center">
+                                <p class="text-[18px] font-medium mt-2">4</p>
+                                <img src="./assets/images & svg/star-product.svg" alt="">
+                            </div>
+                        </div>
+                            <button class="w-[56px] h-[56px] cursor-pointer buttonShopProduct overflow-hidden bg-[#EF4056] z-[2] flex justify-center items-center rounded-full shadow shadow-gray-400 absolute top-[94%] right-[20px] border border-[#EF4056] transition-[width] duration-200 hover:w-[260px] hover:justify-between hover:items-center hover:px-2 hover:bg-[#EF4056]">
+                                <img src="./assets/images & svg/plus-icon-white.svg" class="img1btnShopProduct font-bold" alt="">
+                                <img src="./assets/images & svg/plus-icon-bold.svg" class="img1btnShopProduct hidden" alt="">
+                                <p class="text-white textBbuttonShopProduct absolute -left-36 transition-all duration-200 font-bold text-[16px]">افزودن به سبد خرید</p>
+                            </button>
+                    </div>
+                    
+                </div>
+                <button class="mt-12 w-[195px] px-4 py-2  justify-center items-center border border-[#00DC9E] text-[#00DC9E] bg-transparent transition-all duration-150 hover:bg-[#00DC9E] hover:text-white rounded-[10px] hidden" id="btn-slider-search-box">نمایش همه موارد</button>
+            </div>
+            </div>
+        </section>
+
+        <!-- products categorization -->
+        <section class="w-full mb-8 mt-20 px-12 products-categorization-container">
+            <div class="w-full px-16 flex mb-8 guide-products-categorization-container">
+                <a href="#" class="flex gap-3 w-40 text-[#06B884]"> مشاهده همه <img src="./assets/images & svg/arrow-left.svg" alt=""></a>
+                <h5 class="text-center w-full  ml-16">دسته بندی محصولات</h5>
+            </div>
+            <div class="w-full h-[320px] bg-[#a0a0a031] rounded-[2rem] relative bg-gray-for-tabBar">
+                <!-- tab bar -->
+                <div class="w-full flex justify-center items-center absolute top-8  tabBar-container">
+                    <section class="tabBar ">
+                            <a href="#">
+                                <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                                <h5 class="text-[9px] text-center font-bold">همه</h5>
+                                <p class="mt-1 text-[8px] text-center">همه محصولات</p>
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                                <h5 class="text-[9px] text-center font-bold">نهاده های کشاورزی</h5>
+                                <p class="mt-1 text-[8px] text-center">50 فروشگاه</p>
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                                <h5 class="text-[9px] text-center font-bold">نهاده های کشاورزی</h5>
+                                <p class="mt-1 text-[8px] text-center">50 فروشگاه</p>
+                            </a>
+                            <br class="break-tabBar">
+                    <a href="#">
+                            <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                            <h5 class="text-[9px] text-center font-bold">نهاده های کشاورزی</h5>
+                            <p class="mt-1 text-[8px] text-center">50 فروشگاه</p>
+                    </a>
+                    <a href="#">
+                            <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                            <h5 class="text-[9px] text-center font-bold">نهاده های کشاورزی</h5>
+                            <p class="mt-1 text-[8px] text-center">50 فروشگاه</p>
+                    </a>
+                    <a href="#">
+                            <img src="./assets/images & svg/shop-icon-tabBar.svg" alt="">
+                            <h5 class="text-[9px] text-center font-bold">نهاده های کشاورزی</h5>
+                            <p class="mt-1 text-[8px] text-center">50 فروشگاه</p>
+                    </a>
+                    <span></span>
+                    <div class="arrow-tabBar"><img src="./assets/images & svg/Rectangle 18981.svg" width="20px" height="20px" alt=""></div>
+                    <div class="arrow-tabBar2 hidden"><img src="./assets/images & svg/Rectangle 18981.svg" width="52px" height="52px" alt=""></div>
+                </section>
+            </div>
+            
+            <!-- products -->
+            <section class="w-full px-10 flex justify-center items-center gap-4 absolute top-[45%] product-slider-container mb-14">
+                <ul id="lightSlider" class="w-full ">
+                    <li class="sliderproduct1">
+                        <div class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product">
+                            <img src="./assets/images & svg/bg-product-2.jpg"  alt="productImg">
+                            <div class="w-full flex justify-between items-center pt-3">
+                                <div class="flex flex-col items-start gap-2">
+                                    <h1 class="mr-3 text-[17px] font-bold titleProduct">آجیل و خشکبار</h1>
+                                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">میزان موجودی محصول</p>
+                                </div>
+                                <div class="flex gap-2 items-center startProduct">
+                                    <p class="text-[16px] font-medium mt-1">4</p>
+                                    <img src="./assets/images & svg/star-product.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w-full flex justify-between items-center mt-5  mb-2 font-medium container-buttons-product">
+                                <button id="product-1" class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="17px" height="17px" alt="">
+                                    <p class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150">افزودن به سبد خرید</p>
+                                </button>
+                                <button id="qty-1" class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white ">
+                                    <img id="plus-qty-1" src="./assets/images & svg/plus-icon.svg" width="16px" height="16px" alt="">
+                                    <p id="qty-number-1" class="text-[18px]">1</p>
+                                    <img id="delete-qty-1" src="./assets/images & svg/recycle-bin.svg" width="16px" height="16px" alt="">
+                                    <p id="minus-qty-1" class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden "> - </p>
+                                </button>
+                                <div>    
+                                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product">
+                            <img src="./assets/images & svg/bg-product-2.jpg"  alt="productImg">
+                            <div class="w-full flex justify-between items-center pt-3">
+                                <div class="flex flex-col items-start gap-2">
+                                    <h1 class="mr-3 text-[17px] font-bold titleProduct">آجیل و خشکبار</h1>
+                                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">میزان موجودی محصول</>
+                                </div>
+                                <div class="flex gap-2 items-center startProduct">
+                                    <p class="text-[16px] font-medium mt-1">4</p>
+                                    <img src="./assets/images & svg/star-product.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w-full container-buttons-product flex justify-between items-center mt-5  mb-2 font-medium">
+                                <button class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="17px" height="17px" alt="">
+                                    <p class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150">افزودن به سبد خرید</p>
+                                </button>
+                                <button  class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white ">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="16px" height="16px" alt="">
+                                    <p class="text-[18px]">1</p>
+                                    <img src="./assets/images & svg/recycle-bin.svg" width="16px" height="16px" alt="">
+                                    <p class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden "> - </p>
+                                </button>
+                                <div>    
+                                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product">
+                            <img src="./assets/images & svg/bg-product-2.jpg"  alt="productImg">
+                            <div class="w-full flex justify-between items-center pt-3">
+                                <div class="flex flex-col items-start gap-2">
+                                    <h1 class="mr-3 text-[17px] font-bold titleProduct">آجیل و خشکبار</h1>
+                                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">میزان موجودی محصول</>
+                                </div>
+                                <div class="flex gap-2 items-center startProduct">
+                                    <p class="text-[16px] font-medium mt-1">4</p>
+                                    <img src="./assets/images & svg/star-product.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w-full container-buttons-product flex justify-between items-center mt-5  mb-2 font-medium">
+                                <button class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="17px" height="17px" alt="">
+                                    <p class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150">افزودن به سبد خرید</p>
+                                </button>
+                                <button class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white ">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="16px" height="16px" alt="">
+                                    <p  class="text-[18px]">1</p>
+                                    <img src="./assets/images & svg/recycle-bin.svg" width="16px" height="16px" alt="">
+                                    <p class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden "> - </p>
+                                </button>
+                                <div>    
+                                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product">
+                            <img src="./assets/images & svg/bg-product-2.jpg"  alt="productImg">
+                            <div class="w-full flex justify-between items-center pt-3">
+                                <div class="flex flex-col items-start gap-2">
+                                    <h1 class="mr-3 text-[17px] font-bold titleProduct">آجیل و خشکبار</h1>
+                                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">میزان موجودی محصول</>
+                                </div>
+                                <div class="flex gap-2 items-center startProduct">
+                                    <p class="text-[16px] font-medium mt-1">4</p>
+                                    <img src="./assets/images & svg/star-product.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w-full container-buttons-product flex justify-between items-center mt-5  mb-2 font-medium">
+                                <button class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="17px" height="17px" alt="">
+                                    <p class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150">افزودن به سبد خرید</p>
+                                </button>
+                                <button class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white ">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="16px" height="16px" alt="">
+                                    <p class="text-[18px]">1</p>
+                                    <img src="./assets/images & svg/recycle-bin.svg" width="16px" height="16px" alt="">
+                                    <p class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden "> - </p>
+                                </button>
+                                <div>    
+                                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product">
+                            <img src="./assets/images & svg/bg-product-2.jpg"  alt="productImg">
+                            <div class="w-full flex justify-between items-center pt-3">
+                                <div class="flex flex-col items-start gap-2">
+                                    <h1 class="mr-3 text-[17px] font-bold titleProduct">آجیل و خشکبار</h1>
+                                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">میزان موجودی محصول</>
+                                </div>
+                                <div class="flex gap-2 items-center startProduct">
+                                    <p class="text-[16px] font-medium mt-1">4</p>
+                                    <img src="./assets/images & svg/star-product.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="w-full container-buttons-product flex justify-between items-center mt-5  mb-2 font-medium">
+                                <button class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="17px" height="17px" alt="">
+                                    <p class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150">افزودن به سبد خرید</p>
+                                </button>
+                                <button class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white ">
+                                    <img src="./assets/images & svg/plus-icon.svg" width="16px" height="16px" alt="">
+                                    <p class="text-[18px]">1</p>
+                                    <img src="./assets/images & svg/recycle-bin.svg" width="16px" height="16px" alt="">
+                                    <p class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden "> - </p>
+                                </button>
+                                <div>    
+                                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+                  </ul>
+                  <button type="button" id="goToPrevSlide"><img src="./assets/images & svg/arrow-prev-slide-product.svg" alt=""></button>
+                  <button type="button" id="goToNextSlide"><img src="./assets/images & svg/arrow-next-slide-product.svg" alt=""></button>
+               
+                </section>
+            
+            </div>  
+            
+            <div class=" flex gap-3 justify-center items-center cursor-pointer absolute top-[92%] right-[80px]" id="back-to-top">
+                <p>بازگشت به بالا</p>
+                <img src="./assets/images & svg/back-to-top-icon.svg" alt="">
+            </p>
+        </section>
+        
+        <!-- services section -->
+        <section class="w-[100vw]  mt-[29rem]  flex justify-center items-center">
+            <div class="item2-services  border-b-2 border-[#00C897] border-solid w-full border-services-section">
+            </div>
+            <div class="item1-services  w-full services-section left-0 h-[120px] px-4 py-2 flex justify-center items-center gap-24 rounded-tr-[35px] rounded-br-[35px] bg-[#00DC9E] text-white">
+            <div class="flex flex-col items-center justify-center gap-1 services-section-item">
+                <img src="./assets/images & svg/customer-service.svg" alt="" width="45px" height="45px">
+                <h2 class="text-[13px]">مشاوره و پشتیبانی</h2>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1 services-section-item">
+                <img src="./assets/images & svg/shopping-cart.svg" alt="" width="45px" height="45px">
+                <h2 class="text-[13px]">خرید مطمئن و باکیفیت</h2>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1 services-section-item">
+                <img src="./assets/images & svg/credit-card.svg" alt="" width="45px" height="45px">
+                <h2 class="text-[13px]">تضمین اصالت کالا</h2>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1 services-section-item">
+                <img src="./assets/images & svg/delivery-truck.svg" alt="" width="45px" height="45px">
+                <h2 class="text-[13px]">ارسال سریع به سراسر کشور</h2>
+            </div>
+            </div>
+        </section>        
+    </main>
+
+    <!-- footer -->
+    <footer class="w-[100vw] mt-16">
+        <div class="px-8 py-2">
+        <div class="flex items-end gap-2">
+            <div class="w-1 h-5 bg-[#00C897] mb-2"></div>
+            <h1 class="text-2xl mt-4 footer-title">دکتر پاین، بازار بزرگ کشاورزی ایران</h1>
+        </div>
+        <div class="w-full mt-9 flex justify-between footer-section items-start">
+            <div class="flex flex-col footer-section-item">
+                <h2 class="mb-10 font-bold text-[16px]">درباره ما</h2>
+                <p class="w-[425px] h-[212px] text-[14px] font-[400]">لورم ایپسـوم مــتن ساختــگی با تولید سادگــی نامفهوم از صنــعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنـامه و مجــله در ستون وـــرآنچــنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود و آیـنده شنـاخت  فـــراوان جامـــــعه و  متخصصــــــان را می طلبــد تا با نــرم افــزار هــا   خــــت بیشتــری را برای طراحــان رایانه ای علی الخصـوص طراحان خلاقی و فرهـــنگ 
+                    .پیشــرو در زبان فارســـی ایجاد کرد   
+                </p>
+            </div>
+            <div class="flex items-center justify-between gap-7 border-r border-r-gray-100 pr-5 footer-section-item">
+                <div class="flex flex-col gap-7">
+                    <h2 class="mb-5 font-bold text-[18px]">خدمات مشتری</h2>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-7">
+                    <h2 class="mb-5 font-bold text-[18px]">خدمات فروشنده</h2>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                    <div class="element-services">
+                        <img src="./assets/images & svg/arrow-footer.svg" alt="">
+                        <p>لورم ایپسوم متن ساختگی</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col border-r border-r-gray-100 pr-16 footer-section-item">
+                <h2 class="mb-10 font-bold text-[16px] backup-title">هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم</h2>
+                <div class="flex flex-col gap-7">
+                    <div class="flex gap-3">
+                        <img src="./assets/images & svg/contactUs1.svg" alt="">
+                        <p>شماره تماس : 55447799 - 031</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <img src="./assets/images & svg/contactUs2.svg" alt="">
+                        <p>info@DrPine.ir</p>
+                    </div>
+                    <div class="flex gap-3 footer-location">
+                        <img src="./assets/images & svg/location.svg" alt="">
+                        <p>اصفهان، کاشان، خیابان امیرکبیر</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full  px-20  justify-between items-center hidden footer-social-media-container">
+                <h1> همراه ما باشید:</h1>
+                <div class="flex gap-4">
+                    <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer bg-[#00C897] footer-social-media-container-item">
+                        <img src="./assets/images & svg/instagram.svg" alt="">
+                    </div>
+                    <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-[#151D3B] footer-social-media-container-item">
+                        <img src="./assets/images & svg/linkdin-responsive-icon.svg" alt="">
+                    </div>
+                    <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-[#151D3B] footer-social-media-container-item">
+                        <img src="./assets/images & svg/telegram-responsive-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <div class="w-[100vw] h-full mt-10  bg-[#151D3B] text-white rounded-tl-3xl rounded-tr-3xl right-0 left-0">
+            <div class="w-full flex justify-between items-center px-8 py-6">
+                <div class="flex items-center footer-social-media-container-2">
+                    <h2 class="ml-14 text-[16px]">با ما در شبکه های اجتماعی همراه باشید</h2>
+                    <div class="flex gap-4">
+                        <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0">
+                            <img src="./assets/images & svg/instagram.svg" alt="">
+                        </div>
+                        <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0">
+                            <img src="./assets/images & svg/linkdin.svg" alt="">
+                        </div>
+                        <div class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0">
+                            <img src="./assets/images & svg/telegram.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-[14px] font-thin privacy-text">کلیه حقوق این سایت متعلق به دکتر پاین می باشد </h2>
+            </div>
+            <div class="w-full h-[8px] bg-[#00C897]"></div>
+        </div>
+    </footer>
+
+
+    <!-- show modal signup -->
+    <div class="signupContainer " id="signupContainer">
+        <div class="signupSection animate__animated  animate__zoomIn ">
+            <div class="logoSignup">
+                <img src="./assets/images & svg/logo.svg" alt="" width="70px" height="70px">
+                <p class="">Mazraee</p>
+                <p class="changePhoneNumber" id="labelchangePhoneNumber">تغییر شماره</p>
+            </div>
+            <div class="formSignup">
+                <div class="titleSignup">
+                    <div>
+                        <span></span>
+                        <h2>ورود | ثبت نام</h2>
+                    </div>
+                    <p id="labelenterPhoneNumber">.سلام! لطفا برای ورود، شماره موبایل خود را وارد کنید</p>
+                </div>
+                <div class="form" id="formSignup">
+                        <input type="text">
+                        <p class="-mt-5 mb-8 hidden " id="enterPhoneNumber">شماره همراه خود را درست و کامل وارد کنید</p>
+                    <button type="submit">ارسال کد تایید</button>
+                </div>
+                <div class="w-full  justify-between items-center hidden mt-7" id="timerSignup">
+                    <h4 class="text-[15px]">ورود با رمز عبور </h4>
+                    <p class="font-light text-[15px]"></p>
+                </div>
+                <p class="privcySignup">
+                    .با ورود و یا ثبت نام در سایت دکترپاین، شرایط و قوانین حریم خصوصی  آن را میپذیرم
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <!-- jquery cdn -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="./assets/splide/js/splide.min.js"></script>
+    <script src="./scripts/lightslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
+                    
