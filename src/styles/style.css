@@ -50,12 +50,12 @@ p {
   display: none;
 }
 
-#navbar-container div:hover p {
+#navbar-container .navbarItem:hover p {
   font-weight: bold;
 }
 
-#navbar-container div:hover img {
-  transition: 0.3s all ease-in-out !important;
+#navbar-container .navbarItem:hover img {
+  transition: 0.3s all ease-in-out;
   opacity: 1;
 }
 
@@ -1413,6 +1413,7 @@ font-size: 18px;
 
   .services-section {
     width: 98%;
+    height: 90px;
     position: absolute;
     left: 0;
     display: flex;
@@ -1420,8 +1421,8 @@ font-size: 18px;
     align-items: center;
     gap: 0px;
     flex-direction: row;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
     overflow: scroll;
     white-space: nowrap;
   }
