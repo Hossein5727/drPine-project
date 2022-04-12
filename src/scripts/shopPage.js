@@ -4,6 +4,35 @@ let containerDropDown2 = document.getElementById("container-dropDown-2");
 let containerDropDown3 = document.getElementById("container-dropDown-3");
 let containerDropDown4 = document.getElementById("container-dropDown-4");
 
+let navMenu = document.getElementById("navbar-container-2");
+hamburger = document.getElementById("hamburger");
+
+function openNav() {
+  navMenu.style.width = "340px";
+  navMenu.style.right = "0px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  navMenu.style.width = "0";
+  navMenu.style.right = "-40px";
+  document.body.style.backgroundColor = "white";
+}
+
+document.addEventListener("click", function (event) {
+  if (
+    navMenu.style.width == "340px" &&
+    !event.target.isEqualNode(hamburger) &&
+    !event.target.isEqualNode(navMenu) &&
+    !navMenu.contains(event.target)
+  ) {
+    navMenu.style.width = "0";
+    navMenu.style.right = "-40px";
+    document.body.style.backgroundColor = "white";
+  }
+});
+
 $(document).ready(function () {
   $("#btn-filter-best").click(function (e) {
     e.preventDefault();
@@ -102,7 +131,14 @@ $("#btn-dropDown-4").click(function (e) {
     $("#container-dropDown-4").css("display", "flex");
     $("#bottom-arrow-drop-4").css("transform", "rotate(180deg)");
   }
-}); //range price & location
+});
+
+$("#back-to-top2").click(function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+//range price & location
 const rangeInput = document.querySelectorAll(".range-input input"),
   priceInput = document.querySelectorAll(".price-input input"),
   range = document.querySelector(".slider .progress");
