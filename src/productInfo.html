@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/productInfo.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="w-full shadow shadow-gray-300 px-6 py-1 h-auto flex justify-between items-center header-container"
+    >
+      <div class="flex items-start justify-center rightColumnHeader">
+        <img
+          src="./assets/images & svg/nav-logo.svg"
+          id="hamburger"
+          onclick="openNav()"
+          alt="navLogo"
+          class="nav-logo hidden"
+        />
+        <div
+          class="flex w-[66px] h-full items-start justify-start mt-0 mr-0 md:mt-4 md:mr-16 header-logo-container"
+        >
+          <img src="./assets/images & svg/logo.svg" alt="logo" />
+        </div>
+
+        <nav
+          class="flex flex-col items-start h-full mr-16 gap-6"
+          id="navbar-container"
+        >
+          <div class="flex items-center h-full gap-4 mt-6 list-navbar">
+            <div class="flex gap-2">
+              <img src="./assets/images & svg/Grouping.svg" alt="Grouping" />
+              <p>دسته بندی ها</p>
+              <img
+                src="./assets/images & svg/bottom arrow.svg"
+                alt="bottom arrow"
+              />
+            </div>
+            <div class="flex gap-2 transition-all duration-200">
+              <img
+                src="./assets/images & svg/home.svg"
+                class="opacity-0"
+                alt=""
+                width="18px"
+              />
+              <a href="./index.html" class="text-[14px]">صفحه اصلی</a>
+            </div>
+            <div class="flex gap-2">
+              <img
+                src="./assets/images & svg/shop-icon-header.svg"
+                class="opacity-0"
+                alt=""
+                width="18px"
+              />
+              <a href="./shopPage.html" class="text-[14px]">فروشگاه</a>
+            </div>
+            <div class="flex gap-2">
+              <img
+                src="./assets/images & svg/discount-icon-header.svg"
+                class="opacity-0"
+                alt=""
+                width="18px"
+              />
+              <p>تخفیف ها و پیشنهادات</p>
+            </div>
+            <div class="flex gap-2">
+              <img
+                src="./assets/images & svg/start-icon-header.svg"
+                class="opacity-0"
+                alt=""
+                width="18px"
+              />
+              <p>از کجا شروع کنم</p>
+            </div>
+          </div>
+          <div
+            class="w-[640px] bg-[#F0F0F1] flex justify-start gap-3 items-center h-[49px] px-7 rounded-xl -mr-32"
+          >
+            <img
+              src="./assets/images & svg/search-icon-2.svg"
+              width="22px"
+              height="22px"
+              alt=""
+            />
+            <input
+              type="text"
+              class="w-full h-full bg-transparent border-none outline-none"
+              placeholder="جستجو بین همه محصولات ..."
+            />
+          </div>
+        </nav>
+
+        <nav class="gap-4" id="navbar-container-2">
+          <div
+            class="w-full flex justify-between items-center pt-2 px-1 pb-4 border-b border-b-[#b8b8b833]"
+          >
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/images & svg/logo.svg"
+                width="24px"
+                height="24px"
+                alt=""
+              />
+              <p class="text-[12px]">Mazraee</p>
+            </div>
+            <img
+              src="./assets/images & svg/close-icon-responsive.svg"
+              width="21px"
+              height="21px"
+              onclick="closeNav()"
+              alt="close-icon"
+              class="close-icon-menu hidden"
+            />
+          </div>
+
+          <div
+            class="w-full flex flex-col gap-3 pb-4 border-b border-b-[#b8b8b833]"
+          >
+            <div class="flex items-center gap-8 mb-1">
+              <img
+                src="./assets/images & svg/shop-icon-header.svg"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <p class="text-[13px]">فروشگاه</p>
+            </div>
+
+            <div class="flex items-center gap-8 mb-1">
+              <img
+                src="./assets/images & svg/discount-icon-header.svg"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <p class="text-[13px]">تخفیف ها و پیشنهادات</p>
+            </div>
+
+            <div class="flex items-center gap-8 mb-1">
+              <img
+                src="./assets/images & svg/start-icon-header.svg"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <p class="text-[13px]">از کجا شروع کنم؟</p>
+            </div>
+
+            <div class="flex items-center gap-8 mb-1">
+              <img
+                src="./assets/images & svg/aboutUs-icon-header.svg"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <p class="text-[13px]">درباره ما</p>
+            </div>
+
+            <div class="flex items-center gap-8 mb-1 text-[12px]">
+              <img
+                src="./assets/images & svg/weblog-icon-header.svg"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <p class="text-[13px]">وبلاگ</p>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col gap-7 pb-4">
+            <h2 class="text-[13px] font-bold mb-2">دسته بندی ها</h2>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">محصولات زراعی</option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">ادوات کشاورزی</option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">فرآورده ها</option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">
+                نهاده های کشاورزی
+              </option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">
+                خدمات و صنایع وابسته
+              </option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+
+            <select
+              draggable="true"
+              class="outline-none border-none text-[13px]"
+            >
+              <option value="" selected class="hidden">
+                دانش و علوم کشاورزی
+              </option>
+              <option value="actual value 2">Display Text 2</option>
+              <option value="actual value 3">Display Text 3</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-12 ml-9 leftColumnHeader">
+        <div
+          class="w-full bg-[#F5F5F5] items-center px-4 py-2 rounded-[12px] hidden header-search-box"
+        >
+          <img
+            src="./assets/images & svg/search-icon-2.svg"
+            alt="search-icon"
+            width="25px"
+          />
+          <input
+            type="text"
+            placeholder="دنبال چه محصولی هستی؟"
+            class="w-full h-full bg-transparent flex justify-center items-center mr-4 outline-none"
+          />
+        </div>
+
+        <div
+          class="flex items-center justify-center rounded-full signupLink w-[160px] h-[40px] text-[#06B884] md:hidden"
+        >
+          <img
+            src="./assets/images & svg/signup.svg"
+            alt="signup"
+            class="ml-3"
+          />
+          <p class="bg-transparent cursor-pointer" id="signupLink">
+            <span class="hidden md:inline-block">ثبت نام |</span>
+            ورود
+          </p>
+        </div>
+        <div class="hidden md:flex md:flex-col md:justify-end md:items-center">
+          <div
+            class="w-[130px] h-[36px] flex justify-between items-center px-1 rounded-2xl bg-[#9292921e] mt-5 mb-6"
+          >
+            <img
+              src="./assets/images & svg/profile-shop.png"
+              class="-mr-2 mt-1"
+              width="48px"
+              height="48px"
+              alt=""
+            />
+            <p class="text-[11px] w-full">پروفایل کاربری</p>
+            <img
+              src="./assets/images & svg/bottom arrow.svg"
+              width="8px"
+              height="8px"
+              alt=""
+            />
+          </div>
+          <div class="hidden justify-between items-center md:flex">
+            <div class="flex items-center gap-4 w-full">
+              <img
+                src="./assets/images & svg/map-icon.svg"
+                alt=""
+                class="blob green"
+              />
+              <p class="text-[12px]">لطفا شهر و استان خود را انتخاب کنید</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-center md:-mt-12 items-center relative basket-icon"
+        >
+          <img
+            src="./assets/images & svg/basket-icon.svg"
+            class="basket-img"
+            alt=""
+          />
+          <p
+            class="bg-[#EF4056] w-[22px] h-[22px] text-[16px] text-white text-center rounded-md flex justify-center items-center absolute -bottom-4 -right-3"
+          >
+            3
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="px-6 py-4">
+      <div
+        class="pb-3 border-b border-b-[#d2d2d263] flex justify-between items-center md:hidden"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            src="./assets/images & svg/map-icon.svg"
+            alt=""
+            class="blob green"
+          />
+          <p class="text-[12px]">لطفا شهر و استان خود را انتخاب کنید</p>
+        </div>
+        <img
+          src="./assets/images & svg/arrow-prev-slide-product.svg"
+          width="7px"
+          height="7px"
+          alt=""
+        />
+      </div>
+
+      <div class="w-full flex items-center gap-2 mt-4">
+        <p class="text-[12px] text-[#9F9F9F] md:text-[#6E6E6E]">
+          فروشگاه دکتر پاین
+        </p>
+        <p class="text-[12px] text-[#9F9F9F] md:text-[#6E6E6E]">|</p>
+        <p class="text-[12px] text-[#9F9F9F] md:text-[#6E6E6E]">فرآورده ها</p>
+      </div>
+
+      <div class="w-full flex flex-col mt-7 justify-center items-center gap-6">
+        <div class="w-full flex flex-col justify-center gap-4">
+          <div class="w-full flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <p>۴</p>
+              <img
+                src="./assets/images & svg/star-product.svg"
+                width="15px"
+                height="15px"
+                class="mb-1"
+                alt=""
+              />
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-[35px] h-[35px] flex justify-center items-center rounded-full border border-[#16252A] hover:bg-[#00C897] transition-all duration-150 hover:border-[#00C897]"
+              >
+                <img
+                  src="./assets/images & svg/comment-icon.svg"
+                  width="17px"
+                  height="17px"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="w-[35px] h-[35px] flex justify-center items-center rounded-full border border-[#16252A] hover:bg-[#00C897] transition-all duration-150 hover:border-[#00C897]"
+              >
+                <img
+                  src="./assets/images & svg/warning-icon.svg"
+                  width="17px"
+                  height="17px"
+                  class="mb-1"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="w-[35px] h-[35px] flex justify-center items-center rounded-full border border-[#16252A] hover:bg-[#00C897] transition-all duration-150 hover:border-[#00C897]"
+              >
+                <img
+                  src="./assets/images & svg/share-icon.svg"
+                  width="15px"
+                  height="15px"
+                  class="mr-[3px]"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper mySwiper w-full">
+            <div class="swiper-wrapper w-full h-[375px]">
+              <div class="swiper-slide w-full">
+                <img src="./assets/images & svg/bg-product-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide w-full">
+                <img src="./assets/images & svg/bg-product-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide w-full">
+                <img src="./assets/images & svg/bg-product-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide w-full">
+                <img src="./assets/images & svg/bg-product-2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col justify-center gap-4">
+          <div
+            class="w-full flex flex-col items-start gap-3 border-b border-b-[#d2d2d2a9] pb-3"
+          >
+            <h2 class="text-[17px] font-bold text-[#232323]">
+              آجیل و خشکبار گردو
+            </h2>
+            <p class="text-[13px] text-[#00C897] px-3">
+              دسته بندی : فرآورده ها | آجیل و خشکبار
+            </p>
+          </div>
+          <div
+            class="w-full flex flex-col justify-start gap-4 border-b border-b-[#d2d2d2a9] pb-3"
+          >
+            <div class="w-[80%] flex justify-between items-center">
+              <h3 class="text-[14px] text-[#8B8B8B]">مشخصات محصول :</h3>
+              <h3 class="text-[14px] text-[#232323]">لورم ایپسوم</h3>
+            </div>
+
+            <div class="w-[80%] flex justify-between items-center">
+              <h3 class="text-[14px] text-[#8B8B8B]">سال تولید:</h3>
+              <h3 class="text-[14px] text-[#232323]">لورم ایپسوم</h3>
+            </div>
+
+            <div class="w-[80%] flex justify-between items-center">
+              <h3 class="text-[14px] text-[#8B8B8B]">فروشنده:</h3>
+              <h3 class="text-[14px] text-[#232323]">لورم ایپسوم</h3>
+            </div>
+
+            <div class="w-[80%] flex justify-between items-center">
+              <h3 class="text-[14px] text-[#8B8B8B]">موجودی محصول:</h3>
+              <h3 class="text-[14px] text-[#232323]">لورم ایپسوم</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full mt-5 border border-[#d2d2d2a9] rounded-lg px-4 py-2 flex flex-col gap-3 justify-start"
+      >
+        <h2 class="text-[#00C897] text-[14px] font-bold">توضیحات</h2>
+        <p class="text-[#3F3F3F] text-[13px] leading-6">
+          لورم ایپسـوم متن ساختگی تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحـان گرافیک است. چاپگـرها و متون بلکه تکنولوژی مورد نیــاز و
+          کاربردهای متنوع با هـدف بهبـود .و آینده شناخت
+        </p>
+      </div>
+
+      <div class="mt-9">
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper w-full h-[495px]">
+            <div class="swiper-slide w-full">
+              <div
+                class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product"
+              >
+                <img
+                  src="./assets/images & svg/bg-product-2.jpg"
+                  alt="productImg"
+                />
+                <div class="w-full flex justify-between items-center pt-3">
+                  <div class="flex flex-col items-start gap-2">
+                    <h1 class="mr-3 text-[17px] font-bold titleProduct">
+                      آجیل و خشکبار
+                    </h1>
+                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">
+                      میزان موجودی محصول
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-center startProduct">
+                    <p class="text-[16px] font-medium mt-1">4</p>
+                    <img src="./assets/images & svg/star-product.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="w-full flex justify-between items-center mt-5 mb-2 font-medium container-buttons-product"
+                >
+                  <button
+                    id="product-1"
+                    class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1"
+                  >
+                    <img
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="17px"
+                      height="17px"
+                      alt=""
+                    />
+                    <p
+                      class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150"
+                    >
+                      افزودن به سبد خرید
+                    </p>
+                  </button>
+                  <button
+                    id="qty-1"
+                    class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white"
+                  >
+                    <img
+                      id="plus-qty-1"
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p id="qty-number-1" class="text-[18px]">1</p>
+                    <img
+                      id="delete-qty-1"
+                      src="./assets/images & svg/recycle-bin.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p
+                      id="minus-qty-1"
+                      class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden"
+                    >
+                      -
+                    </p>
+                  </button>
+                  <div>
+                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full">
+              <div
+                class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product"
+              >
+                <img
+                  src="./assets/images & svg/bg-product-2.jpg"
+                  alt="productImg"
+                />
+                <div class="w-full flex justify-between items-center pt-3">
+                  <div class="flex flex-col items-start gap-2">
+                    <h1 class="mr-3 text-[17px] font-bold titleProduct">
+                      آجیل و خشکبار
+                    </h1>
+                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">
+                      میزان موجودی محصول
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-center startProduct">
+                    <p class="text-[16px] font-medium mt-1">4</p>
+                    <img src="./assets/images & svg/star-product.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="w-full container-buttons-product flex justify-between items-center mt-5 mb-2 font-medium"
+                >
+                  <button
+                    class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1"
+                  >
+                    <img
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="17px"
+                      height="17px"
+                      alt=""
+                    />
+                    <p
+                      class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150"
+                    >
+                      افزودن به سبد خرید
+                    </p>
+                  </button>
+                  <button
+                    class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white"
+                  >
+                    <img
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p class="text-[18px]">1</p>
+                    <img
+                      src="./assets/images & svg/recycle-bin.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p
+                      class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden"
+                    >
+                      -
+                    </p>
+                  </button>
+                  <div>
+                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide w-full">
+              <div
+                class="w-[290px] relative rounded-[1rem] py-4 px-4 flex justify-center items-center flex-col gap-3 bg-white product"
+              >
+                <img
+                  src="./assets/images & svg/bg-product-2.jpg"
+                  alt="productImg"
+                />
+                <div class="w-full flex justify-between items-center pt-3">
+                  <div class="flex flex-col items-start gap-2">
+                    <h1 class="mr-3 text-[17px] font-bold titleProduct">
+                      آجیل و خشکبار
+                    </h1>
+                    <p class="mr-3 text-[13px] font-thin text-[#ACACAC]">
+                      میزان موجودی محصول
+                    </p>
+                  </div>
+                  <div class="flex gap-2 items-center startProduct">
+                    <p class="text-[16px] font-medium mt-1">4</p>
+                    <img src="./assets/images & svg/star-product.svg" alt="" />
+                  </div>
+                </div>
+                <div
+                  class="w-full container-buttons-product flex justify-between items-center mt-5 mb-2 font-medium"
+                >
+                  <button
+                    class="w-[42px] h-[42px] buttonShopProduct2 overflow-hidden mr-4 bg-white border border-[#EF4056] rounded-xl flex justify-center items-center transition-[width] duration-200 hover:w-[140px] hover:justify-between hover:px-2 hover:py-1"
+                  >
+                    <img
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="17px"
+                      height="17px"
+                      alt=""
+                    />
+                    <p
+                      class="text-[#EF4056] hidden opacity-0 add-to-cart-btn font-bold text-[12px] transition-all duration-150"
+                    >
+                      افزودن به سبد خرید
+                    </p>
+                  </button>
+                  <button
+                    class="w-[140px] h-[50px] hidden justify-between items-center px-2 py-1 rounded-xl select-qty-container bg-white"
+                  >
+                    <img
+                      src="./assets/images & svg/plus-icon.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p class="text-[18px]">1</p>
+                    <img
+                      src="./assets/images & svg/recycle-bin.svg"
+                      width="16px"
+                      height="16px"
+                      alt=""
+                    />
+                    <p
+                      class="w-[16px] h-[16px] text-[35px] text-[#EF4056] pb-10 hidden"
+                    >
+                      -
+                    </p>
+                  </button>
+                  <div>
+                    <p class="text-[15px] priceProduct">250.000 تومان</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </main>
+
+    <section class="w-[100vw] mt-[8rem] flex justify-center items-center">
+      <div
+        class="item2-services border-b-2 border-[#00C897] border-solid w-full border-services-section"
+      ></div>
+      <div
+        class="item1-services w-full services-section left-0 h-[120px] px-4 py-2 flex justify-center items-center gap-24 rounded-tr-[35px] rounded-br-[35px] bg-[#00DC9E] text-white"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-1 services-section-item"
+        >
+          <img
+            src="./assets/images & svg/customer-service.svg"
+            alt=""
+            width="45px"
+            height="45px"
+          />
+          <h2 class="text-[13px]">مشاوره و پشتیبانی</h2>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-1 services-section-item"
+        >
+          <img
+            src="./assets/images & svg/shopping-cart.svg"
+            alt=""
+            width="45px"
+            height="45px"
+          />
+          <h2 class="text-[13px]">خرید مطمئن و باکیفیت</h2>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-1 services-section-item"
+        >
+          <img
+            src="./assets/images & svg/credit-card.svg"
+            alt=""
+            width="45px"
+            height="45px"
+          />
+          <h2 class="text-[13px]">تضمین اصالت کالا</h2>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center gap-1 services-section-item"
+        >
+          <img
+            src="./assets/images & svg/delivery-truck.svg"
+            alt=""
+            width="45px"
+            height="45px"
+          />
+          <h2 class="text-[13px]">ارسال سریع به سراسر کشور</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="w-[100vw] mt-16">
+      <div class="px-8 py-2">
+        <div class="flex items-end gap-2">
+          <div class="w-1 h-5 bg-[#00C897] mb-2"></div>
+          <h1 class="text-2xl mt-4 footer-title">
+            دکتر پاین، بازار بزرگ کشاورزی ایران
+          </h1>
+        </div>
+        <div
+          class="w-full mt-9 flex justify-between footer-section items-start"
+        >
+          <div class="flex flex-col footer-section-item">
+            <h2 class="mb-10 font-bold text-[16px]">درباره ما</h2>
+            <p class="w-[425px] h-[212px] text-[14px] font-[400]">
+              لورم ایپسـوم مــتن ساختــگی با تولید سادگــی نامفهوم از صنــعت چاپ
+              و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنـامه و
+              مجــله در ستون وـــرآنچــنان که لازم است و برای شرایط فعلی
+              تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود و آیـنده شنـاخت
+              فـــراوان جامـــــعه و متخصصــــــان را می طلبــد تا با نــرم
+              افــزار هــا خــــت بیشتــری را برای طراحــان رایانه ای علی
+              الخصـوص طراحان خلاقی و فرهـــنگ .پیشــرو در زبان فارســـی ایجاد
+              کرد
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between gap-7 border-r border-r-gray-100 pr-5 footer-section-item"
+          >
+            <div class="flex flex-col gap-7">
+              <h2 class="mb-5 font-bold text-[18px]">خدمات مشتری</h2>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-7">
+              <h2 class="mb-5 font-bold text-[18px]">خدمات فروشنده</h2>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+              <div class="element-services">
+                <img src="./assets/images & svg/arrow-footer.svg" alt="" />
+                <p>لورم ایپسوم متن ساختگی</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col border-r border-r-gray-100 pr-16 footer-section-item"
+          >
+            <h2 class="mb-10 font-bold text-[16px] backup-title">
+              هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم
+            </h2>
+            <div class="flex flex-col gap-7">
+              <div class="flex gap-3">
+                <img src="./assets/images & svg/contactUs1.svg" alt="" />
+                <p>شماره تماس : 55447799 - 031</p>
+              </div>
+              <div class="flex gap-3">
+                <img src="./assets/images & svg/contactUs2.svg" alt="" />
+                <p>info@DrPine.ir</p>
+              </div>
+              <div class="flex gap-3 footer-location">
+                <img src="./assets/images & svg/location.svg" alt="" />
+                <p>اصفهان، کاشان، خیابان امیرکبیر</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-full px-20 justify-between items-center hidden footer-social-media-container"
+          >
+            <h1>همراه ما باشید:</h1>
+            <div class="flex gap-4">
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer bg-[#00C897] footer-social-media-container-item"
+              >
+                <img src="./assets/images & svg/instagram.svg" alt="" />
+              </div>
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-[#151D3B] footer-social-media-container-item"
+              >
+                <img
+                  src="./assets/images & svg/linkdin-responsive-icon.svg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-[#151D3B] footer-social-media-container-item"
+              >
+                <img
+                  src="./assets/images & svg/telegram-responsive-icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-[100vw] h-full mt-10 bg-[#151D3B] text-white rounded-tl-3xl rounded-tr-3xl right-0 left-0"
+      >
+        <div class="w-full flex justify-between items-center px-8 py-6">
+          <div class="flex items-center footer-social-media-container-2">
+            <h2 class="ml-14 text-[16px]">
+              با ما در شبکه های اجتماعی همراه باشید
+            </h2>
+            <div class="flex gap-4">
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0"
+              >
+                <img src="./assets/images & svg/instagram.svg" alt="" />
+              </div>
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0"
+              >
+                <img src="./assets/images & svg/linkdin.svg" alt="" />
+              </div>
+              <div
+                class="w-[40px] h-[40px] rounded-full flex justify-center items-center cursor-pointer border-2 p-2 border-white transition-all duration-150 hover:bg-[#00C897] hover:border-0"
+              >
+                <img src="./assets/images & svg/telegram.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <h2 class="text-[14px] font-thin privacy-text">
+            کلیه حقوق این سایت متعلق به دکتر پاین می باشد
+          </h2>
+        </div>
+        <div class="w-full h-[8px] bg-[#00C897]"></div>
+      </div>
+    </footer>
+
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <script src="./scripts/productInfo.js"></script>
+    <!-- <script src="./scripts/lightslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script> -->
+  </body>
+</html>
